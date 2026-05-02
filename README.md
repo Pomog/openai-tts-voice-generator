@@ -18,6 +18,32 @@ Create a virtual environment:
 ```bash
 python3 -m venv .venv
 source .venv/bin/activate
+```
+
+Install dependencies:
+```bash
 pip install -r requirements.txt
+```
+
+Create .env from the example:
+```bash
 cp .env.example .env
-eof
+```
+Edit .env and add your real API key:
+```
+OPENAI_API_KEY=your_api_key_here
+OPENAI_TTS_MODEL=gpt-4o-mini-tts
+OPENAI_TTS_VOICE=cedar
+```
+
+## Usage
+Add .txt scripts into the scripts/ folder.
+```bash
+python generate_tts.py
+```
+Generated MP3 files will appear in:
+output/
+
+## Security note
+
+Do not commit .env.
