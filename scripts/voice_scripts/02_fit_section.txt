@@ -1,0 +1,18 @@
+This is the Cormorant fit I use for the mission.
+
+It has seven 125 millimeter Prototype Gauss Guns,
+one compact light missile launcher,
+two Magnetic Field Stabilizers for extra turret damage,
+and a basic shield tank.
+
+The fit shows about 171 DPS,
+which is enough for this mission.
+
+The capacitor is not stable,
+but that is acceptable because the fight should not last forever.
+
+I use Caldari Navy Antimatter Charge S
+for higher close-range railgun damage.
+
+With this setup, I want to apply as much damage as possible
+and finish Dagan before capacitor becomes a serious problem.

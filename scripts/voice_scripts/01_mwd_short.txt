@@ -1,0 +1,9 @@
+Big ships feel painfully slow when they try to warp.
+
+Here is the difference.
+
+From a full stop, without the MWD trick, this ship needs at least twenty-seven seconds to enter warp.
+
+With one MWD cycle, it reaches warp speed in about ten seconds.
+
+One cycle. Faster warp. Simple trick.
