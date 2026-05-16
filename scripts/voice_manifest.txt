@@ -1,0 +1,6 @@
+# Incursion beginner video voice-over parts
+voice_scripts/choice.txt
+voice_scripts/hyperion.txt
+voice_scripts/sp-reminder.txt
+voice_scripts/communities.txt
+voice_scripts/remapping.txt
