@@ -1,6 +1,11 @@
 # Incursion beginner video voice-over parts
-voice_scripts/choice.txt
-voice_scripts/hyperion.txt
-voice_scripts/sp-reminder.txt
-voice_scripts/communities.txt
-voice_scripts/remapping.txt
+voice_scripts/hook.txt
+voice_scripts/matter.txt
+voice_scripts/newbro.txt
+voice_scripts/advanced.txt
+voice_scripts/lesson.txt
+voice_scripts/fun.txt
+voice_scripts/real.txt
+voice_scripts/closing.txt
+voice_scripts/recruitment.txt
+voice_scripts/giveaway.txt
