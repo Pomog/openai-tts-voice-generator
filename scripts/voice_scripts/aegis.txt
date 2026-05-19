@@ -20,4 +20,4 @@ If the route looks bad, leave. Losing the site is cheaper than losing the ship.
 
 AEGIS sites can pay, but they punish careless flying immediately.
 
-Fly safe.
+Fly safe. 
