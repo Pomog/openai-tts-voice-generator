@@ -1,0 +1,15 @@
+I use safe spots.
+
+From a safe spot, I can use directional scanner to check the destination gate before I warp there.
+
+D-scan helps you see ships, probes, structures, and other objects within range and angle, so it is one of the most important survival tools in dangerous space.
+
+For example, if I see many combat ships on the next gate, I do not warp my hauler there.
+
+If I see combat scanner probes while I am sitting in a safe spot, I move.
+
+A safe spot is not a permanent home.
+
+It is only a temporary position that gives you time to think.
+
+The moment someone starts hunting you, you should already have the next safe spot ready.

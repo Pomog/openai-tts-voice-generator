@@ -1,0 +1,21 @@
+Another common mistake is ignoring docking and undocking.
+
+You can survive the whole route and still die at the station.
+
+That is why I use instant-dock and instant-undock bookmarks.
+
+An instant-dock bookmark helps you land inside docking range, instead of landing outside and getting bumped or tackled.
+
+An instant-undock bookmark lets you warp immediately after undocking, without slow aligning in front of the station.
+
+This is especially important in trade hubs, low-sec stations, and any place where people wait for haulers.
+
+Do not move expensive cargo from a station you have never bookmarked.
+
+Before hauling, prepare the route.
+
+Prepare the gates.
+
+And prepare the stations.
+
+Hauling safety starts before the cargo is even inside the ship.

@@ -1,0 +1,29 @@
+Next, I check the route with EVE Gatecheck.
+
+Gatecheck is useful because it shows recent kill activity along your route and helps you identify possible gate camps.
+
+In my example, I can see activity near the entrance to Ahbazon.
+
+That does not automatically mean death.
+
+For a cloaky, fast-aligning ship, this may still be manageable.
+
+But after refreshing the page, I can see suicide gank activity in another system.
+
+That changes the risk.
+
+This is why you do not check the route once and forget it.
+
+You check it before undocking.
+
+You check it before moving expensive cargo.
+
+And if the page changes, your decision should change too.
+
+Gatecheck is not perfect.
+
+It cannot predict the future.
+
+But it gives you information.
+
+And information is cheaper than replacing your ship.

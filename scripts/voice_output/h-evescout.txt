@@ -1,0 +1,23 @@
+If I do not carry valuable cargo, or if I am only moving a fast cloaky ship, I can also check wormhole shortcuts.
+
+One useful tool is EvE-Scout.
+
+EvE-Scout maps public wormhole connections to systems like Thera and Turnur, and sometimes this can create a much shorter route across New Eden.
+
+The idea is simple.
+
+First, I check if there is a wormhole entrance close to my current location.
+
+Then I check if there is an exit close to my destination.
+
+For example, if I can enter near Misaba and exit closer to Jita, that can save many jumps.
+
+But this is not automatically safe.
+
+Thera can be dangerous.
+
+Wormholes can be camped.
+
+And if you jump blind in a slow hauling ship, you can still die.
+
+So for expensive cargo, I treat wormhole routes as an option, not as a guarantee.
