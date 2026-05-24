@@ -1,7 +1,8 @@
 # Incursion beginner video voice-over parts
-voice_scripts/e10.txt
-voice_scripts/e11.txt
-voice_scripts/e12.txt
-voice_scripts/e13.txt
-voice_scripts/e14.txt
-voice_scripts/e15.txt
+voice_scripts/e16.txt
+voice_scripts/e17.txt
+voice_scripts/e18.txt
+voice_scripts/e19.txt
+voice_scripts/e20.txt
+voice_scripts/e21.txt
+voice_scripts/e22.txt
