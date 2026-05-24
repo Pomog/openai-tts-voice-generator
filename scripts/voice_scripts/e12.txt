@@ -1,0 +1,17 @@
+Before warping to the site, I refit my Loki.
+
+I remove some scanning modules and replace them with passive shield tank modules.
+
+The reason is simple: if I fail a hack in this type of site, I expect an explosion.
+
+Depending on the site and container, this explosion can deal serious damage.
+
+So I want more buffer before I start hacking.
+
+I also replaced my warp core stabilizer with a cargo extender.
+
+And honestly, this is not the smartest decision.
+
+More cargo space is useful, but losing extra escape protection in null sec is dangerous.
+
+This is exactly the kind of small decision that can become expensive later.

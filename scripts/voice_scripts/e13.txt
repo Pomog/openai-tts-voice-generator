@@ -1,0 +1,15 @@
+Before I go to the Ghost Site, I want to make an undock bookmark.
+
+This is very important when using stations in dangerous space.
+
+After undocking, I turn on my MWD and continue flying straight away from the station.
+
+I keep the same direction as the ship had after undocking.
+
+Then, when I am far enough away, I create a bookmark.
+
+This gives me a fast escape point.
+
+Later, if I undock and something dangerous is waiting near the station, I can instantly warp to this bookmark instead of slowly aligning.
+
+This is a small preparation step, but it can save the ship.
