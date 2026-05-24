@@ -1,10 +1,9 @@
 # Incursion beginner video voice-over parts
-voice_scripts/h-hook.txt
-voice_scripts/h-rule1.txt
-voice_output/h-evescout.txt
-voice_scripts/h-gatecheck.txt
-voice_scripts/h-scouting.txt
-voice_scripts/h-dscan.txt
-voice_scripts/h-cloack.txt
-voice_scripts/h-ingamestat.txt
-voice_scripts/h-fin.txt
+voice_scripts/e1.txt
+voice_scripts/e2.txt
+voice_scripts/e3.txt
+voice_scripts/e4.txt
+voice_scripts/e5.txt
+voice_scripts/e6.txt
+voice_scripts/e7.txt
+voice_scripts/e8.txt

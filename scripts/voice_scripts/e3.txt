@@ -1,0 +1,17 @@
+To activate a filament, there are a few important conditions.
+
+First, you need to be in a fleet, even if you are alone.
+
+Second, your safety settings must allow the action.
+
+Third, your cloak must be deactivated.
+
+So before pressing the filament, check your fleet, check your safety, and make sure you are not cloaked.
+
+After activation, the filament will move you into a pseudo-random null sec system.
+
+This is the moment where the real run begins.
+
+You do not know exactly where you will land, who lives there, or how active the area is.
+
+So do not rush.
