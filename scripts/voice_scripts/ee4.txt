@@ -1,0 +1,15 @@
+And here you can see the rift opening.
+
+The first thing I need to do is deploy the Mobile Tractor Unit. The MTU will help collect the canisters after they are pulled out of the rift, so I do not need to manually approach every container.
+
+The core mechanic of this anomaly can basically be called space fishing.
+
+You need to lock the rift portal and use tractor beams manually to pull cargo canisters out of the wormhole. The important part is manual control. Do not just activate everything and forget about it.
+
+When the canisters appear, the MTU can start pulling them closer and collecting them. This makes the site easier to manage, especially if several cans appear around the rift.
+
+The rift has a limit: it will collapse after enough canisters are retrieved, or after the site timer runs out. The known limit is 27 canisters.
+
+This is where the danger starts.
+
+If you use too many tractor beams, or cycle them too aggressively, the instability level can rise too much. When that happens, Rogue Drone NPCs can spawn.
