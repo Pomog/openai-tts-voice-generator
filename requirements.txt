@@ -1,2 +1,3 @@
 openai
 python-dotenv
+manim==0.20.1
