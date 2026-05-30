@@ -1,0 +1,15 @@
+Newton’s second law connects force and motion.
+
+In Newton’s original wording, “motion” means what we now call momentum.
+
+Momentum depends on the amount of matter in a body, the speed at which the body is moving, and the direction in which it is moving.
+
+In modern notation, momentum is a vector quantity, defined as mass multiplied by velocity.
+
+This means momentum depends on mass, speed, and direction.
+
+Because velocity has direction, momentum has direction too.
+
+Newton’s second law says that force is the rate at which momentum changes with time.
+
+In calculus language, force is the time derivative of momentum.

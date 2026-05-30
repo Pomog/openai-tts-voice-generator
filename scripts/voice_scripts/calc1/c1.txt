@@ -1,0 +1,9 @@
+Imagine an asteroid moving through the gravitational field of a planet.
+
+We use calculus to understand what happens to its velocity?
+
+How much will the asteroid accelerate?
+
+How fast can it become?
+
+To answer that, we first need a basic idea from mechanics.

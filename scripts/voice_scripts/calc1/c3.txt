@@ -1,0 +1,15 @@
+Now let’s apply this to an object with constant mass.
+
+Since momentum is mass multiplied by velocity, we can substitute it into Newton’s second law.
+
+Because the mass is constant, it does not change with time.
+
+So we can move the mass outside the derivative.
+
+The derivative of velocity with respect to time is acceleration.
+
+So Newton’s second law becomes the familiar formula.
+
+This means force changes velocity.
+
+In a gravitational field, this force is gravity.
