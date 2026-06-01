@@ -1,0 +1,29 @@
+The gravitational field affects our asteroid by doing work on it.
+
+Work is the energy transferred to or from an object by a force acting along a displacement, the dot product.
+
+If the force points along the displacement, the object gains kinetic energy.
+
+If the force is perpendicular to the motion, it does not change the speed, but change velocity.
+
+Now imagine the asteroid moves along a path.
+
+The force becomes stronger as the asteroid gets closer to the planet and has an inverse-square relation with distance.
+
+So we cannot always use one force multiplied by one distance.
+
+Instead, we divide the path into many tiny displacements.
+
+For each tiny displacement, we calculate a tiny amount of work.
+
+Then calculus adds all these tiny pieces together.
+
+That is why work is written as the integral of force dotted with displacement along the path.
+
+Now we connect this to velocity.
+
+Velocity is displacement per unit time.
+
+So a displacement can be written as velocity multiplied by a time step.
+
+Instead of force dotted with displacement, we can write force dotted with velocity, integrated over time.

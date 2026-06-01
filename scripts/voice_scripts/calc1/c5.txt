@@ -1,0 +1,35 @@
+Now we use Newton’s second law.
+
+For an object with constant mass, force equals mass times acceleration.
+
+So work becomes the integral of mass times acceleration dotted with velocity over time.
+
+Acceleration is the change of velocity with respect to time.
+
+So the expression becomes mass times the integral of the velocity derivative dotted with velocity over time.
+
+Now comes the key step.
+
+During a tiny time step, acceleration creates a tiny change in velocity.
+
+So acceleration multiplied by a tiny time step gives a tiny change in velocity.
+
+This lets us change the integral from time to velocity.
+
+For straight-line motion, where acceleration and velocity point along the same line, the vector expression becomes simpler.
+
+Acceleration dotted with velocity becomes speed multiplied by the rate of change of speed.
+
+So the work becomes mass times the integral of v d v.
+
+Now this integral is simple.
+
+The integral of v d v is one half v squared.
+
+So the work becomes one half mass times final velocity squared, minus one half mass times starting velocity squared.
+
+This means work is the change in kinetic energy.
+
+So calculus gives us the formula for kinetic energy.
+
+Work transferred by force becomes motion stored as kinetic energy.

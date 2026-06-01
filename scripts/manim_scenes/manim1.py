@@ -296,3 +296,249 @@ class C2Momentum(Scene):
         self.play(Write(formula_f))
         self.play(FadeIn(rate_text, shift=UP))
         self.wait(2)
+
+
+from manim import *
+
+
+class C3ForceToAcceleration(Scene):
+    def construct(self):
+        # ------------------------------------------------------------
+        # Title
+        # ------------------------------------------------------------
+        title = Text(
+            "Constant Mass: From Momentum to Acceleration",
+            font_size=38,
+        )
+        title.to_edge(UP)
+
+        # ------------------------------------------------------------
+        # Formula positions
+        # ------------------------------------------------------------
+        main_formula_pos = RIGHT * 2.4 + UP * 0.95
+        secondary_formula_pos = RIGHT * 2.4 + DOWN * 0.05
+        note_pos = RIGHT * 2.4 + DOWN * 1.1
+        gravity_note_pos = RIGHT * 2.4 + UP * 0.25
+
+        def main_formula(tex):
+            f = MathTex(tex)
+            f.scale(1.35)
+            f.move_to(main_formula_pos)
+            return f
+
+        def secondary_formula(tex):
+            f = MathTex(tex)
+            f.scale(1.15)
+            f.move_to(secondary_formula_pos)
+            return f
+
+        # Formula chain
+        f_newton = main_formula(r"\vec{F} = \frac{d\vec{p}}{dt}")
+        f_momentum = main_formula(r"\vec{p} = m\vec{v}")
+        f_substitute = main_formula(r"\vec{F} = \frac{d(m\vec{v})}{dt}")
+        f_mass_outside = main_formula(r"\vec{F} = m\frac{d\vec{v}}{dt}")
+        f_acceleration = secondary_formula(r"\frac{d\vec{v}}{dt} = \vec{a}")
+        f_final = main_formula(r"\vec{F} = m\vec{a}")
+        f_gravity = main_formula(r"\vec{F}_g = m\vec{a}")
+
+        # Notes
+        note_constant_mass = Text(
+            "object with constant mass",
+            font_size=26,
+            color=YELLOW,
+        ).move_to(note_pos)
+
+        note_substitution = Text(
+            "substitute momentum into Newton's second law",
+            font_size=24,
+            color=YELLOW,
+        ).move_to(note_pos)
+
+        note_mass_outside = Text(
+            "mass does not change with time",
+            font_size=24,
+            color=YELLOW,
+        ).move_to(note_pos)
+
+        note_acceleration = Text(
+            "velocity derivative = acceleration",
+            font_size=25,
+            color=ORANGE,
+        ).move_to(RIGHT * 2.4 + DOWN * 1.45)
+
+        note_force_changes_velocity = Text(
+            "force changes velocity",
+            font_size=27,
+            color=GREEN,
+        ).move_to(note_pos)
+
+        note_gravity = Text(
+            "in a gravitational field, this force is gravity",
+            font_size=24,
+            color=RED,
+        ).move_to(gravity_note_pos)
+
+        # ------------------------------------------------------------
+        # Physical picture on the left
+        # ------------------------------------------------------------
+        planet = Circle(radius=0.7, color=BLUE)
+        planet.set_fill(BLUE_E, opacity=0.85)
+        planet.move_to(LEFT * 4.3 + DOWN * 1.55)
+
+        planet_label = Text("planet", font_size=22)
+        planet_label.next_to(planet, DOWN, buff=0.2)
+
+        asteroid = Dot(
+            point=LEFT * 0.6 + DOWN * 1.55,
+            radius=0.12,
+            color=WHITE,
+        )
+
+        asteroid_label = Text("asteroid", font_size=20)
+        asteroid_label.next_to(asteroid, UP, buff=0.18)
+
+        # Path line reaches the planet
+        path = Line(
+            planet.get_right(),
+            asteroid.get_center(),
+            color=GRAY_B,
+            stroke_width=4,
+        )
+
+        # Velocity vector starts from asteroid center
+        velocity_arrow = Arrow(
+            asteroid.get_center(),
+            asteroid.get_center() + RIGHT * 1.15,
+            buff=0,
+            color=YELLOW,
+            stroke_width=5,
+            max_tip_length_to_length_ratio=0.25,
+        )
+
+        velocity_label = MathTex(r"\vec{v}", color=YELLOW).scale(0.85)
+        velocity_label.next_to(velocity_arrow, DOWN, buff=0.1)
+
+        # Gravity force arrow
+        gravity_arrow = Arrow(
+            asteroid.get_center(),
+            asteroid.get_center() + LEFT * 1.15,
+            buff=0,
+            color=RED,
+            stroke_width=5,
+            max_tip_length_to_length_ratio=0.25,
+        )
+
+        gravity_label = MathTex(r"\vec{F}_g", color=RED).scale(0.85)
+        gravity_label.next_to(gravity_arrow, DOWN, buff=0.1)
+
+        # Acceleration arrow placed below the gravity arrow
+        acceleration_arrow = Arrow(
+            asteroid.get_center() + DOWN * 1,
+            asteroid.get_center() + DOWN * 1 + LEFT * 0.9,
+            buff=0,
+            color=ORANGE,
+            stroke_width=5,
+            max_tip_length_to_length_ratio=0.25,
+        )
+
+        acceleration_label = MathTex(r"\vec{a}", color=ORANGE).scale(0.85)
+        acceleration_label.next_to(acceleration_arrow, DOWN, buff=0.1)
+
+        left_note_1 = Text(
+            "force points toward the planet",
+            font_size=22,
+            color=RED,
+        )
+        left_note_1.move_to(LEFT * 3.35 + DOWN * 0.2)
+
+        left_note_2 = Text(
+            "acceleration follows the force",
+            font_size=22,
+            color=ORANGE,
+        )
+        left_note_2.move_to(LEFT * 3.5 + DOWN * 3)
+
+        # ------------------------------------------------------------
+        # Animation
+        # ------------------------------------------------------------
+        self.play(FadeIn(title))
+        self.wait(0.3)
+
+        # Now let’s apply this to an object with constant mass.
+        self.play(Write(f_newton))
+        self.play(FadeIn(note_constant_mass, shift=UP))
+        self.wait(1.0)
+
+        # Since momentum is mass multiplied by velocity...
+        self.play(
+            FadeOut(note_constant_mass),
+            ReplacementTransform(f_newton, f_momentum),
+        )
+        self.wait(0.9)
+
+        # ...we can substitute it into Newton’s second law.
+        self.play(
+            ReplacementTransform(f_momentum, f_substitute),
+            FadeIn(note_substitution, shift=UP),
+        )
+        self.wait(1.0)
+
+        # Because the mass is constant, it does not change with time.
+        self.play(
+            FadeOut(note_substitution),
+            FadeIn(note_mass_outside, shift=UP),
+        )
+        self.wait(1.0)
+
+        # So we can move the mass outside the derivative.
+        self.play(ReplacementTransform(f_substitute, f_mass_outside))
+        self.wait(1.0)
+
+        # The derivative of velocity with respect to time is acceleration.
+        self.play(
+            FadeOut(note_mass_outside),
+            Write(f_acceleration),
+            FadeIn(note_acceleration, shift=UP),
+        )
+        self.wait(1.2)
+
+        # So Newton’s second law becomes the familiar formula.
+        self.play(
+            FadeOut(note_acceleration),
+            FadeOut(f_acceleration),
+            ReplacementTransform(f_mass_outside, f_final),
+        )
+        self.play(FadeIn(note_force_changes_velocity, shift=UP))
+        self.wait(1.0)
+
+        # This means force changes velocity.
+        self.play(
+            FadeIn(planet),
+            FadeIn(planet_label),
+            Create(path),
+            FadeIn(asteroid),
+            FadeIn(asteroid_label),
+        )
+        self.play(GrowArrow(velocity_arrow), FadeIn(velocity_label))
+        self.wait(0.4)
+
+        self.play(GrowArrow(gravity_arrow), FadeIn(gravity_label))
+        self.play(FadeIn(left_note_1, shift=UP))
+        self.wait(0.4)
+
+        self.play(GrowArrow(acceleration_arrow), FadeIn(acceleration_label))
+        self.play(FadeIn(left_note_2, shift=UP))
+        self.wait(0.8)
+
+        # In a gravitational field, this force is gravity.
+        self.play(
+            FadeOut(note_force_changes_velocity),
+            ReplacementTransform(f_final, f_gravity),
+        )
+        self.wait(0.3)
+
+        # Clean final state: keep only what helps
+        self.play(
+            FadeIn(note_gravity, shift=UP),
+        )
+        self.wait(2.0)
