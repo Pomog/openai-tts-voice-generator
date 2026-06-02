@@ -824,3 +824,442 @@ class C4WorkAlongPath(Scene):
         pulse(work_time_formula.get_part_by_tex(r"\vec{v}"), color=BLUE)
         pulse(work_time_formula.get_part_by_tex("dt"), color=GREEN)
         self.wait(2.0)
+
+
+class C5WorkToKineticEnergy(Scene):
+    def construct(self):
+        # ------------------------------------------------------------
+        # Helper
+        # ------------------------------------------------------------
+        def pulse(mobj, color=YELLOW, scale_factor=1.15):
+            self.play(
+                Indicate(
+                    mobj,
+                    color=color,
+                    scale_factor=scale_factor,
+                ),
+                run_time=0.8,
+            )
+
+        # ------------------------------------------------------------
+        # Title
+        # ------------------------------------------------------------
+        title = Text("Work Becomes Kinetic Energy", font_size=38)
+        title.to_edge(UP)
+
+        # ------------------------------------------------------------
+        # Left-side physical picture
+        # ------------------------------------------------------------
+        planet = Circle(radius=0.75, color=BLUE)
+        planet.set_fill(BLUE_E, opacity=0.85)
+        planet.move_to(LEFT * 4.5 + DOWN * 1.0)
+
+        planet_label = Text("planet", font_size=22)
+        planet_label.next_to(planet, DOWN, buff=0.2)
+
+        asteroid = Dot(point=LEFT * 0.8 + DOWN * 1.0, radius=0.12, color=WHITE)
+
+        asteroid_label = Text("asteroid", font_size=20)
+        asteroid_label.next_to(asteroid, UP, buff=0.15)
+
+        path = Line(
+            planet.get_right(),
+            asteroid.get_center(),
+            color=GRAY_B,
+            stroke_width=4,
+        )
+
+        # Velocity vector: toward the planet
+        velocity_arrow_start = Arrow(
+            asteroid.get_center() + UP * 0.55,
+            asteroid.get_center() + UP * 0.55 + LEFT * 0.75,
+            buff=0,
+            color=YELLOW,
+            stroke_width=6,
+            max_tip_length_to_length_ratio=0.25,
+        )
+
+        velocity_arrow_final = Arrow(
+            asteroid.get_center() + UP * 0.55,
+            asteroid.get_center() + UP * 0.55 + LEFT * 1.35,
+            buff=0,
+            color=YELLOW,
+            stroke_width=6,
+            max_tip_length_to_length_ratio=0.25,
+        )
+
+        velocity_label = MathTex(r"\vec{v}", color=YELLOW).scale(0.9)
+        velocity_label.next_to(velocity_arrow_start, UP, buff=0.1)
+
+        # Force vector
+        force_arrow = Arrow(
+            asteroid.get_center(),
+            asteroid.get_center() + LEFT * 1.0,
+            buff=0,
+            color=RED,
+            stroke_width=6,
+            max_tip_length_to_length_ratio=0.25,
+        )
+
+        force_label = MathTex(r"\vec{F}", color=RED).scale(0.9)
+        force_label.next_to(force_arrow, RIGHT, buff=0.1)
+
+        # Acceleration vector
+        acceleration_arrow = Arrow(
+            asteroid.get_center() + DOWN * 0.55,
+            asteroid.get_center() + DOWN * 0.55 + LEFT * 1.0,
+            buff=0,
+            color=ORANGE,
+            stroke_width=6,
+            max_tip_length_to_length_ratio=0.25,
+        )
+
+        acceleration_label = MathTex(r"\vec{a}", color=ORANGE).scale(0.9)
+        acceleration_label.next_to(acceleration_arrow, RIGHT, buff=0.1)
+
+        note_same_line = Text(
+            "acceleration and velocity align",
+            font_size=21,
+            color=ORANGE,
+        )
+        note_same_line.next_to(acceleration_arrow, DOWN, buff=0.55)
+
+        # ------------------------------------------------------------
+        # Right-side formula positions
+        # ------------------------------------------------------------
+        formula_pos = RIGHT * 3.0 + UP * 1.3
+        secondary_pos = RIGHT * 3.0 + UP * 0.15
+        note_pos = RIGHT * 3.0 + DOWN * 2.45
+
+        # Previous result from C4
+        work_time_formula = MathTex(
+            "W", "=", r"\int", r"\vec{F}", r"\cdot", r"\vec{v}", "dt"
+        )
+        work_time_formula.scale(1.2)
+        work_time_formula.move_to(formula_pos)
+
+        # Newton's second law
+        newton_formula = MathTex(
+            r"\vec{F}", "=", "m", r"\vec{a}"
+        )
+        newton_formula.scale(1.1)
+        newton_formula.move_to(secondary_pos)
+
+        # Substitute F = ma
+        work_ma_formula = MathTex(
+            "W", "=", r"\int", "m", r"\vec{a}", r"\cdot", r"\vec{v}", "dt"
+        )
+        work_ma_formula.scale(1.15)
+        work_ma_formula.move_to(formula_pos)
+
+        # Acceleration definition
+        acceleration_formula = MathTex(
+            r"\vec{a}", "=", r"\frac{d\vec{v}}{dt}"
+        )
+        acceleration_formula.scale(1.1)
+        # Put acceleration formula below Newton's second law formula
+        acceleration_formula.next_to(newton_formula, DOWN, buff=0.45)
+
+        # Substitute acceleration
+        work_derivative_formula = MathTex(
+            "W", "=", "m", r"\int", r"\frac{d\vec{v}}{dt}", r"\cdot", r"\vec{v}", "dt"
+        )
+        work_derivative_formula.scale(1.05)
+        work_derivative_formula.move_to(formula_pos)
+
+        # Tiny velocity change
+        dv_formula = MathTex(
+            r"d\vec{v}", "=", r"\frac{d\vec{v}}{dt}", "dt"
+        )
+        dv_formula.scale(1.05)
+        dv_formula.next_to(acceleration_formula, DOWN, buff=0.25)
+
+        # Straight-line scalar simplification
+        scalar_formula = MathTex(
+            "W", "=", "m", r"\int", r"\frac{dv}{dt}", "v", "dt"
+        )
+        scalar_formula.scale(1.1)
+        scalar_formula.move_to(formula_pos)
+
+        # Change variable
+        dv_scalar_formula = MathTex(
+            "dv", "=", r"\frac{dv}{dt}", "dt"
+        )
+        dv_scalar_formula.scale(1.05)
+        dv_scalar_formula.next_to(scalar_formula, DOWN, buff=0.3)
+
+        # Integral over velocity
+        vdv_formula = MathTex(
+            "W", "=", "m", r"\int_{v_s}^{v_f}", "v", r"\,dv"
+        )
+        vdv_formula.scale(1.15)
+        vdv_formula.move_to(formula_pos)
+
+        # Antiderivative
+        antiderivative_formula = MathTex(
+            "W", "=", "m", r"\left[\frac{v^2}{2}\right]_{v_s}^{v_f}"
+        )
+        antiderivative_formula.scale(1.15)
+        antiderivative_formula.move_to(formula_pos)
+
+        # Work as kinetic energy difference
+        kinetic_difference_formula = MathTex(
+            "W", "=", r"\frac{1}{2}m v_f^2", "-", r"\frac{1}{2}m v_s^2"
+        )
+        kinetic_difference_formula.scale(1.05)
+        kinetic_difference_formula.move_to(formula_pos)
+
+        # Final compact result
+        delta_k_formula = MathTex(
+            "W", "=", r"\Delta K"
+        )
+        delta_k_formula.scale(1.45)
+        delta_k_formula.move_to(formula_pos)
+
+        kinetic_energy_formula = MathTex(
+            "K", "=", r"\frac{1}{2}mv^2"
+        )
+        kinetic_energy_formula.next_to(dv_scalar_formula, DOWN, buff=0.6)
+        kinetic_energy_formula.shift(UP * 0.2)
+
+        # ------------------------------------------------------------
+        # Notes
+        # ------------------------------------------------------------
+        note_newton = Text(
+            "Newton's second law",
+            font_size=22,
+            color=RED,
+        )
+        note_newton.next_to(newton_formula, DOWN, buff=0.2)
+
+        note_acceleration = Text(
+            "acceleration is velocity change over time",
+            font_size=22,
+            color=ORANGE,
+        )
+        note_acceleration.move_to(note_pos)
+
+        note_key_step = Text(
+            "acceleration × tiny time step = tiny velocity change",
+            font_size=21,
+            color=GREEN,
+        )
+        note_key_step.next_to(dv_formula, DOWN, buff=0.2)
+        
+
+        note_change_variable = Text(
+            "change the integral from time to velocity",
+            font_size=22,
+            color=GREEN,
+        )
+        note_change_variable.next_to(vdv_formula, DOWN, buff=0.3)
+
+        note_vdv = Text(
+            "integrate velocity with respect to velocity",
+            font_size=22,
+            color=YELLOW,
+        )
+        note_vdv.next_to(vdv_formula, DOWN, buff=0.3)
+
+        note_final = Text(
+            "work is the change in kinetic energy",
+            font_size=24,
+            color=GREEN,
+        )
+        note_final.move_to(note_pos)
+
+        # ------------------------------------------------------------
+        # Small graph for integral of v dv
+        # ------------------------------------------------------------
+        axes = Axes(
+            x_range=[0, 5, 1],
+            y_range=[0, 5, 1],
+            x_length=3.0,
+            y_length=2.0,
+            axis_config={"include_tip": True},
+        )
+        # Put the graph to the right side of vdv_formula
+        axes.next_to(vdv_formula, LEFT, buff=1.5)
+        axes.shift(UP * 0.1)
+
+        graph = axes.plot(lambda x: x, x_range=[0, 5], color=BLUE, stroke_width=4)
+
+        area = axes.get_area(
+            graph,
+            x_range=[1.2, 4.0],
+            color=GREEN,
+            opacity=0.45,
+        )
+
+        axis_labels = axes.get_axis_labels(
+            MathTex("v"),
+            MathTex("y=v")
+        )
+
+        vs_label = MathTex(r"v_s").scale(0.65)
+        vs_label.next_to(axes.c2p(1.2, 0), DOWN, buff=0.1)
+
+        vf_label = MathTex(r"v_f").scale(0.65)
+        vf_label.next_to(axes.c2p(4.0, 0), DOWN, buff=0.1)
+
+        area_note = Text(
+            "area = integral of v dv",
+            font_size=20,
+            color=GREEN,
+        )
+        area_note.next_to(axes, LEFT, buff=0.25)
+
+        graph_group = VGroup(
+            axes,
+            graph,
+            area,
+            axis_labels,
+            vs_label,
+            vf_label,
+            area_note,
+        )
+
+        # ------------------------------------------------------------
+        # Animation
+        # ------------------------------------------------------------
+        self.play(FadeIn(title))
+        self.wait(0.3)
+
+        self.play(
+            FadeIn(planet),
+            FadeIn(planet_label),
+            Create(path),
+            FadeIn(asteroid),
+            FadeIn(asteroid_label),
+        )
+
+        # Now we use Newton's second law.
+        self.play(Write(work_time_formula))
+        self.wait(0.5)
+
+        self.play(Write(newton_formula))
+        self.play(FadeIn(note_newton, shift=UP * 0.3))
+        pulse(newton_formula.get_part_by_tex(r"\vec{F}"), color=RED)
+        pulse(newton_formula.get_part_by_tex("m"), color=YELLOW)
+        pulse(newton_formula.get_part_by_tex(r"\vec{a}"), color=ORANGE)
+        self.wait(0.5)
+
+        # Work becomes the integral of mass times acceleration dotted with velocity over time.
+        self.play(
+            FadeOut(note_newton, shift=DOWN * 0.3),
+            ReplacementTransform(work_time_formula, work_ma_formula),
+        )
+        self.wait(0.3)
+
+        pulse(work_ma_formula.get_part_by_tex("m"), color=YELLOW)
+        pulse(work_ma_formula.get_part_by_tex(r"\vec{a}"), color=ORANGE)
+        pulse(work_ma_formula.get_part_by_tex(r"\vec{v}"), color=BLUE)
+        pulse(work_ma_formula.get_part_by_tex("dt"), color=GREEN)
+
+        self.play(GrowArrow(force_arrow), FadeIn(force_label))
+        self.play(GrowArrow(acceleration_arrow), FadeIn(acceleration_label))
+        self.play(GrowArrow(velocity_arrow_start), FadeIn(velocity_label))
+        self.wait(0.7)
+
+        # Acceleration is the change of velocity with respect to time.
+        self.play(Write(acceleration_formula))
+        self.play(FadeIn(note_acceleration, shift=UP * 0.3))
+        pulse(acceleration_formula.get_part_by_tex(r"\vec{a}"), color=ORANGE)
+        pulse(acceleration_formula.get_part_by_tex(r"\frac{d\vec{v}}{dt}"), color=GREEN)
+        self.wait(0.7)
+
+        # So expression becomes mass times integral of velocity derivative dotted with velocity.
+        self.play(
+            FadeOut(note_acceleration, shift=DOWN * 0.3),
+            FadeOut(newton_formula),
+            ReplacementTransform(work_ma_formula, work_derivative_formula),
+        )
+        pulse(work_derivative_formula.get_part_by_tex(r"\frac{d\vec{v}}{dt}"), color=ORANGE)
+        pulse(work_derivative_formula.get_part_by_tex(r"\vec{v}"), color=BLUE)
+        self.wait(0.7)
+
+        # Now comes the key step.
+        self.play(Write(dv_formula))
+        self.play(FadeIn(note_key_step, shift=UP * 0.3))
+        pulse(dv_formula.get_part_by_tex(r"\frac{d\vec{v}}{dt}"), color=ORANGE)
+        pulse(dv_formula.get_part_by_tex("dt"), color=GREEN)
+        pulse(dv_formula.get_part_by_tex(r"d\vec{v}"), color=YELLOW)
+
+        # Visual: velocity vector grows
+        self.play(
+            ReplacementTransform(velocity_arrow_start, velocity_arrow_final),
+            run_time=1.0,
+        )
+        self.wait(0.7)
+
+        # This lets us change the integral from time to velocity.
+        self.play(
+            FadeOut(note_key_step, shift=DOWN * 0.3),
+            FadeIn(note_change_variable, shift=UP * 0.3),
+        )
+        self.wait(0.5)
+
+        # Straight-line motion simplification
+        self.play(
+            FadeOut(dv_formula),
+            ReplacementTransform(work_derivative_formula, scalar_formula),
+        )
+        self.play(FadeIn(note_same_line, shift=UP * 0.3))
+        pulse(acceleration_arrow, color=ORANGE)
+        pulse(velocity_arrow_final, color=YELLOW)
+        self.play(FadeOut(acceleration_formula, shift=DOWN * 0.3))
+        self.wait(0.8)
+
+        self.play(
+            FadeOut(note_change_variable, shift=DOWN * 0.3),
+        )
+  
+        # dv = dv/dt dt
+        self.play(Write(dv_scalar_formula))
+        pulse(dv_scalar_formula.get_part_by_tex(r"\frac{dv}{dt}"), color=ORANGE)
+        pulse(dv_scalar_formula.get_part_by_tex("dt"), color=GREEN)
+        pulse(dv_scalar_formula.get_part_by_tex("dv"), color=YELLOW)
+        self.wait(0.8)
+
+        # Work becomes m integral v dv
+        self.play(
+            FadeOut(note_same_line),
+            ReplacementTransform(scalar_formula, vdv_formula),
+            FadeOut(dv_scalar_formula),
+        )
+
+        self.play(FadeIn(note_vdv, shift=UP * 0.3))
+        pulse(vdv_formula.get_part_by_tex("v"), color=BLUE)
+        pulse(vdv_formula.get_part_by_tex(r"\,dv"), color=YELLOW)
+
+        # Show area under y=v
+        self.play(FadeIn(graph_group, shift=UP * 0.3))
+        self.wait(0.8)
+
+        # Integral of v dv = one half v squared
+        self.play(
+            ReplacementTransform(vdv_formula, antiderivative_formula),
+        )
+        pulse(antiderivative_formula.get_part_by_tex(r"\frac{v^2}{2}"), color=GREEN)
+        self.wait(0.8)
+
+        # Work becomes final kinetic energy minus starting kinetic energy
+        self.play(
+            FadeOut(note_vdv, shift=DOWN * 0.3),
+            ReplacementTransform(antiderivative_formula, kinetic_difference_formula),
+        )
+        pulse(kinetic_difference_formula.get_part_by_tex(r"\frac{1}{2}m v_f^2"), color=GREEN)
+        pulse(kinetic_difference_formula.get_part_by_tex(r"\frac{1}{2}m v_s^2"), color=YELLOW)
+        self.wait(0.8)
+
+        # W = Delta K
+        self.play(
+            ReplacementTransform(kinetic_difference_formula, delta_k_formula),
+            FadeIn(note_final, shift=UP * 0.3),
+        )
+        self.wait(0.5)
+
+        # K = 1/2mv^2
+        self.play(Write(kinetic_energy_formula))
+        pulse(kinetic_energy_formula.get_part_by_tex(r"\frac{1}{2}mv^2"), color=GREEN)
+        self.wait(2.0)

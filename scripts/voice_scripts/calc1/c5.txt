@@ -2,7 +2,7 @@ Now we use Newton’s second law.
 
 For an object with constant mass, force equals mass times acceleration.
 
-So work becomes the integral of mass times acceleration dotted with velocity over time.
+Work becomes the integral of mass times acceleration dotted with velocity over time.
 
 Acceleration is the change of velocity with respect to time.
 
