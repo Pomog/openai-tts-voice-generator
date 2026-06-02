@@ -542,3 +542,285 @@ class C3ForceToAcceleration(Scene):
             FadeIn(note_gravity, shift=UP),
         )
         self.wait(2.0)
+
+class C4WorkAlongPath(Scene):
+    def construct(self):
+        # ------------------------------------------------------------
+        # Helper
+        # ------------------------------------------------------------
+        def pulse(mobj, color=YELLOW, scale_factor=1.15):
+            self.play(
+                Indicate(
+                    mobj,
+                    color=color,
+                    scale_factor=scale_factor,
+                ),
+                run_time=0.8,
+            )
+
+        # ------------------------------------------------------------
+        # Title
+        # ------------------------------------------------------------
+        title = Text("Work is the energy transferred to or from an object ", font_size=38)
+        title.to_edge(UP)
+
+        # ------------------------------------------------------------
+        # Left-side physical picture
+        # ------------------------------------------------------------
+        planet = Circle(radius=0.75, color=BLUE)
+        planet.set_fill(BLUE_E, opacity=0.85)
+        planet.move_to(LEFT * 4.5 + DOWN * 1.0)
+
+        planet_label = Text("planet", font_size=22)
+        planet_label.next_to(planet, DOWN, buff=0.2)
+
+        asteroid = Dot(point=LEFT * 0.8 + DOWN * 1.0, radius=0.12, color=WHITE)
+        asteroid_label = Text("asteroid", font_size=20)
+        asteroid_label.next_to(asteroid, UP, buff=0.15)
+
+        path = Line(
+            planet.get_right(),
+            asteroid.get_center(),
+            color=GRAY_B,
+            stroke_width=4,
+        )
+
+        # Main force and displacement arrows: same direction
+        force_arrow = Arrow(
+            asteroid.get_center(),
+            asteroid.get_center() + LEFT * 1.0,
+            buff=0,
+            color=RED,
+            stroke_width=6,
+            max_tip_length_to_length_ratio=0.25,
+        )
+        force_label = MathTex(r"\vec{F}", color=RED).scale(0.9)
+        force_label.next_to(force_arrow, DOWN, buff=0.1)
+
+        ds_arrow = Arrow(
+            asteroid.get_center() + UP * 0.60,
+            asteroid.get_center() + UP * 0.60+ LEFT * 0.95,
+            buff=0,
+            color=YELLOW,
+            stroke_width=6,
+            max_tip_length_to_length_ratio=0.25,
+        )
+        ds_label = MathTex(r"d\vec{s}", color=YELLOW).scale(0.9)
+        ds_label.next_to(ds_arrow, UP, buff=0.1)
+
+        # Perpendicular displacement example
+        ds_perp_arrow = Arrow(
+            asteroid.get_center() + RIGHT * 0.6,
+            asteroid.get_center() + RIGHT * 0.6 + UP * 0.95,
+            buff=0,
+            color=YELLOW,
+            stroke_width=6,
+            max_tip_length_to_length_ratio=0.25,
+        )
+        ds_perp_label = MathTex(r"d\vec{s}", color=YELLOW).scale(0.9)
+        ds_perp_label.next_to(ds_perp_arrow, RIGHT, buff=0.1)
+
+        # Tiny path segments for line integral idea
+        tiny_segments = VGroup()
+        for i in range(7):
+            x = interpolate(planet.get_right()[0], asteroid.get_center()[0], i / 6)
+            seg = Line(
+                [x - 0.12, asteroid.get_center()[1], 0],
+                [x + 0.12, asteroid.get_center()[1], 0],
+                color=YELLOW,
+                stroke_width=5,
+            )
+            tiny_segments.add(seg)
+
+        # ------------------------------------------------------------
+        # Right-side formulas
+        # ------------------------------------------------------------
+        work_formula = MathTex(
+            "W", "=", r"\int", r"\vec{F}", r"\cdot", r"d\vec{s}"
+        )
+        work_formula.scale(1.25)
+        work_formula.move_to(RIGHT * 3.0 + UP * 1.2)
+
+        gravity_formula = MathTex(
+            r"\left|\vec{F}_g\right|", "=", r"\frac{GMm}{r^2}"
+        )
+        gravity_formula.scale(1.1)
+        gravity_formula.move_to(RIGHT * 3.0 + UP * 0.1)
+
+        velocity_formula = MathTex(
+            r"\vec{v}", "=", r"\frac{d\vec{s}}{dt}"
+        )
+        velocity_formula.scale(1.1)
+        velocity_formula.next_to(gravity_formula, DOWN, buff=0.45)
+
+        ds_formula = MathTex(
+            r"d\vec{s}", "=", r"\vec{v}", "dt"
+        )
+        ds_formula.scale(1.1)
+        ds_formula.next_to(velocity_formula, DOWN, buff=0.45)
+
+        work_time_formula = MathTex(
+            "W", "=", r"\int", r"\vec{F}", r"\cdot", r"\vec{v}", "dt"
+        )
+        work_time_formula.scale(1.25)
+        work_time_formula.move_to(RIGHT * 3.0 + UP * 1.2)
+
+        # ------------------------------------------------------------
+        # Notes
+        # ------------------------------------------------------------
+        note_work = Text(
+            "work = force acting along displacement",
+            font_size=24,
+            color=GREEN,
+        )
+        note_work.move_to(UP * 2.2)
+
+        note_parallel = Text(
+            "same direction  →  kinetic energy increases",
+            font_size=22,
+            color=GREEN,
+        )
+        note_parallel.move_to(LEFT * 2.0 + DOWN * 2.6)
+
+        note_perp = Text(
+            "perpendicular  →  changes direction, not speed",
+            font_size=22,
+            color=ORANGE,
+        )
+        note_perp.move_to(LEFT * 1.4 + DOWN * 2.6)
+
+        note_path = Text(
+            "add tiny work pieces along the path",
+            font_size=22,
+            color=YELLOW,
+        )
+        note_path.next_to(force_arrow, UP, buff=1)
+        # I am here 
+
+        note_inverse_square = Text(
+            "gravity gets stronger closer to the planet",
+            font_size=22,
+            color=RED,
+        )
+        note_inverse_square.move_to(RIGHT * 2.7 + DOWN * 2.55)
+
+        note_velocity = Text(
+            "velocity = displacement per unit time",
+            font_size=22,
+            color=BLUE,
+        )
+        note_velocity.move_to(RIGHT * 2.6 + DOWN * 2.55)
+
+        # ------------------------------------------------------------
+        # Start animation
+        # ------------------------------------------------------------
+        self.play(FadeIn(title))
+        self.wait(0.3)
+
+        self.play(
+            FadeIn(planet),
+            FadeIn(planet_label),
+            Create(path),
+            FadeIn(asteroid),
+            FadeIn(asteroid_label),
+        )
+
+        # The gravitational field affects our asteroid by doing work on it.
+        self.play(Write(work_formula))
+        pulse(work_formula[0], color=GREEN)      # W
+        self.play(FadeIn(note_work, shift=UP))
+        self.wait(0.5)
+
+        # Work is the energy transferred ... force acting along displacement, the dot product.
+        pulse(work_formula.get_part_by_tex(r"\vec{F}"), color=RED)
+        pulse(work_formula.get_part_by_tex(r"d\vec{s}"), color=YELLOW)
+        pulse(work_formula.get_part_by_tex(r"\cdot"), color=YELLOW)
+
+        self.play(GrowArrow(force_arrow), FadeIn(force_label))
+        self.play(GrowArrow(ds_arrow), FadeIn(ds_label))
+        self.wait(0.5)
+
+        # If the force points along the displacement...
+        self.play(FadeIn(note_parallel, shift=UP))
+        pulse(force_arrow, color=RED)
+        pulse(ds_arrow, color=YELLOW)
+        self.wait(1.0)
+
+        # If the force is perpendicular to the motion...
+        self.play(
+            FadeOut(ds_arrow),
+            FadeOut(ds_label),
+            FadeOut(note_parallel),
+        )
+        self.play(GrowArrow(ds_perp_arrow), FadeIn(ds_perp_label))
+        self.play(FadeIn(note_perp, shift=UP))
+        pulse(ds_perp_arrow, color=YELLOW)
+        pulse(force_arrow, color=RED)
+        self.wait(1.0)
+
+        # Now imagine the object moves along a path.
+        self.play(
+            FadeOut(ds_perp_arrow),
+            FadeOut(ds_perp_label),
+            FadeOut(note_perp),
+        )
+        self.play(LaggedStart(*[Create(seg) for seg in tiny_segments], lag_ratio=0.12))
+        self.play(FadeIn(note_path, shift=UP))
+        pulse(work_formula.get_part_by_tex(r"\int_C"), color=YELLOW)
+        self.wait(0.8)
+
+        
+        self.play(FadeOut(note_path, shift=RIGHT))
+
+        # The force becomes stronger closer to the planet, inverse-square relation.
+        self.play(Write(gravity_formula))
+        pulse(gravity_formula.get_part_by_tex(r"\vec{F}_g"), color=RED)
+        pulse(gravity_formula.get_part_by_tex(r"r^2"), color=ORANGE)
+        self.play(FadeIn(note_inverse_square, shift=UP))
+        self.wait(1.0)
+
+        # So we cannot always use one force multiplied by one distance.
+        self.play(
+            Circumscribe(work_formula, color=WHITE, fade_out=True),
+            run_time=1.0,
+        )
+        self.wait(0.4)
+
+        # Instead, divide into tiny displacements ... calculus adds them together.
+        pulse(tiny_segments, color=YELLOW, scale_factor=1.05)
+        pulse(work_formula.get_part_by_tex(r"\int_C"), color=YELLOW)
+        self.wait(0.8)
+
+        # That is why work is written as the integral of force dotted with displacement.
+        pulse(work_formula.get_part_by_tex(r"\vec{F}"), color=RED)
+        pulse(work_formula.get_part_by_tex(r"\cdot"), color=BLUE)
+        pulse(work_formula.get_part_by_tex(r"d\vec{s}"), color=YELLOW)
+        self.wait(0.8)
+
+        # Now we connect this to velocity.
+        self.play(Write(velocity_formula))
+        pulse(velocity_formula.get_part_by_tex(r"\vec{v}"), color=BLUE)
+        pulse(velocity_formula.get_part_by_tex(r"d\vec{s}"), color=YELLOW)
+        self.play(FadeOut(note_inverse_square), FadeIn(note_velocity, shift=UP))
+        self.wait(0.8)
+
+        self.play(FadeOut(note_velocity, shift=DOWN))
+
+        # So a displacement can be written as velocity multiplied by a time step.
+        self.play(Write(ds_formula))
+        pulse(ds_formula.get_part_by_tex(r"d\vec{s}"), color=YELLOW)
+        pulse(ds_formula.get_part_by_tex(r"\vec{v}"), color=BLUE)
+        pulse(ds_formula.get_part_by_tex("dt"), color=GREEN)
+        self.wait(1.0)
+
+        # Instead of force dotted with displacement, we can write force dotted with velocity, integrated over time.
+        self.play(
+            TransformMatchingTex(work_formula.copy(), work_time_formula),
+            FadeOut(work_formula),
+        )
+        self.wait(0.3)
+
+        pulse(work_time_formula.get_part_by_tex(r"\vec{F}"), color=RED)
+        pulse(work_time_formula.get_part_by_tex(r"\vec{v}"), color=BLUE)
+        pulse(work_time_formula.get_part_by_tex("dt"), color=GREEN)
+        self.wait(2.0)
