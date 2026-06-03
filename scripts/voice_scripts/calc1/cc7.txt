@@ -1,0 +1,49 @@
+Now we want to find the work done by gravity.
+
+For a constant force, work is simple.
+
+But gravity changes with distance.
+
+So, as before, we use integration.
+
+The general formula for work is a vector formula.
+
+Work equals the integral of force dotted with the tiny displacement vector.
+
+So we write.
+
+W g equals the integral of the gravitational force vector dotted with d r vector.
+
+The dot product is important.
+
+It means that only the part of the force pointing along the motion does work.
+
+Now we define the direction.
+
+The unit vector r-hat points outward from the planet.
+
+It points from the planet’s center toward the asteroid.
+
+But gravity pulls inward.
+
+Gravity pulls the asteroid toward smaller r.
+
+So the gravitational force vector is minus G M m divided by r squared, multiplied by r-hat.
+
+Now consider radial motion.
+
+The asteroid moves directly toward the planet.
+
+So the tiny displacement is also radial.
+
+We write the tiny displacement vector as d r multiplied by r-hat.
+
+Now we substitute this into the work integral.
+
+W g equals the integral from the starting distance r zero to the final distance r f of minus G M m divided by r squared, multiplied by r-hat, dotted with d r multiplied by r-hat.
+
+The dot product of r-hat with r-hat is one.
+
+So the vector expression becomes a scalar integral.
+
+W g equals the integral from r zero to r f of minus G M m divided by r squared, d r.

@@ -1,0 +1,55 @@
+Now we apply calculus to gravity.
+
+Newton’s law of gravitational interaction describes the force between two masses.
+
+Strictly speaking, both objects attract each other, and both objects can move.
+
+But for this model, we choose the planet as the origin of our coordinate system.
+
+So we describe the asteroid’s motion relative to the planet.
+
+The distance r is the distance from the center of the planet to the center of the asteroid.
+
+Newton’s gravitational formula gives the size of the force.
+
+The force equals G times the planet mass times the asteroid mass, divided by r squared.
+
+Here, G is the gravitational constant.
+
+The planet mass is capital M.
+
+The asteroid mass is small m.
+
+And r is the distance between their centers.
+
+This formula tells us that gravity becomes weaker with distance.
+
+When r becomes larger, r squared grows even faster.
+
+So the force becomes smaller.
+
+But r cannot be zero, because division by zero is undefined.
+
+Physically, this also tells us that we must be careful with the meaning of r.
+
+For a planet and an asteroid, r is not the height above the planet’s surface.
+
+It is the distance from center to center.
+
+If the asteroid is near the surface, then r is approximately the planet radius plus the altitude.
+
+So even at the surface, r is not zero.
+
+It is approximately the radius of the planet.
+
+This also reminds us that Newtonian gravity is a classical model.
+
+It works well for planets, moons, asteroids, satellites, and spacecraft.
+
+But at the subatomic scale, gravity is incredibly weak compared with other interactions.
+
+And at very small distances or extremely high energies, we expect Newton’s formula to be incomplete.
+
+That is the domain of quantum gravity, which is still an open area of physics.
+
+Here we will not consider general relativity, where gravitation is described as the curvature of spacetime rather than as an ordinary force between bodies.

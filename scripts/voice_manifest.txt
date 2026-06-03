@@ -1,2 +1,4 @@
 # Incursion beginner video voice-over parts
-voice_scripts/calc1/c4.txt
+voice_scripts/calc1/c6.txt
+voice_scripts/calc1/c7.txt
+voice_scripts/calc1/c8.txt

@@ -1,0 +1,65 @@
+Now we simplify the integral.
+
+G is constant.
+
+The masses are constant.
+
+Only r changes.
+
+So we can move G, M, and m outside the integral.
+
+Then we get.
+
+W g equals minus G M m multiplied by the integral from r zero to r f of one divided by r squared, d r.
+
+Now comes the calculus step.
+
+One divided by r squared is the same as r to the power minus two.
+
+Using the power rule, the integral of r to the power minus two is minus one divided by r.
+
+So the integral gives us minus one over r.
+
+Now we apply the limits.
+
+First, we use the final distance r f.
+
+Then we subtract the value at the starting distance r zero.
+
+After applying the limits, the result becomes.
+
+W g equals G M m multiplied by one over r f minus one over r zero.
+
+So the work done by gravity is.
+
+W g equals G M m, open bracket, one over final distance minus one over starting distance, close bracket.
+
+Now suppose the asteroid starts very far away.
+
+Mathematically, we say that the starting distance r zero approaches infinity.
+
+And suppose the asteroid falls down to the planet’s surface.
+
+Then the final center-to-center distance is approximately the planet radius, capital R.
+
+So the formula becomes.
+
+W g equals G M m multiplied by one over R minus one over r zero.
+
+As r zero approaches infinity, one over r zero approaches zero.
+
+So the work done by gravity becomes.
+
+W g equals G M m divided by R.
+
+This work is positive.
+
+That makes sense.
+
+When the asteroid falls inward, gravity gives energy to the asteroid.
+
+The asteroid speeds up.
+
+This formula is the bridge between gravitational interaction and motion.
+
+To get the formula for speed in a gravitational field, we now connect this gravitational work to kinetic energy.
