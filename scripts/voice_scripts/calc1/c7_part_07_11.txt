@@ -1,0 +1,17 @@
+This value has a special meaning.
+
+It is called escape velocity.
+
+Escape velocity is the minimum starting speed needed to escape from a planet’s gravity.
+
+In the ideal case, the object reaches an infinite distance with zero speed left.
+
+So it does not mean the object keeps moving fast forever.
+
+It means it has just enough energy to get away and never fall back.
+
+This is also why the falling problem and the escape problem give the same number.
+
+If an object falls from rest from very far away, gravity accelerates it to this speed near the surface.
+
+And if we reverse the motion, an object launched from the surface with this speed can escape to very far away.

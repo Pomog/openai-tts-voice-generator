@@ -1,0 +1,25 @@
+Now let us evaluate this for Earth.
+
+We use the gravitational constant:
+
+six point six seven four three times ten to the minus eleven meter cubed per kilogram per second squared.
+
+We use the Earth mass:
+
+five point nine seven two two times ten to the twenty-four kilograms.
+
+And we use the Earth equatorial radius:
+
+six point three seven eight times ten to the six meters.
+
+Substituting these values into the formula gives:
+
+v f is approximately one point one one seven nine times ten to the four meters per second.
+
+That is about eleven thousand one hundred eighty meters per second.
+
+Or eleven point one eight kilometers per second.
+
+So an object starting from rest very far from Earth would reach approximately this speed when falling to Earth’s surface, if we ignore all other forces except Earth’s gravity.
+
+By energy conservation, this same value is also the escape velocity from Earth’s surface, ignoring atmosphere and Earth rotation.

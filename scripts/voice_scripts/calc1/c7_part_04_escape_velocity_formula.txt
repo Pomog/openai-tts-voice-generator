@@ -1,0 +1,31 @@
+Now consider the special case.
+
+The asteroid starts from rest very far away.
+
+So r zero approaches infinity.
+
+And v zero is zero.
+
+The asteroid falls to the planet surface.
+
+So the final center-to-center distance is approximately the planet radius.
+
+We call this final distance R.
+
+In this case, one over r zero approaches zero.
+
+And v zero squared is also zero.
+
+So the equation becomes:
+
+G M m divided by R equals m v f squared divided by two.
+
+Now the asteroid mass appears on both sides.
+
+So the asteroid mass cancels.
+
+After rearranging, we get:
+
+v f equals the square root of two G M divided by R.
+
+This gives the speed reached by an object falling from rest from very far away, under gravity alone.

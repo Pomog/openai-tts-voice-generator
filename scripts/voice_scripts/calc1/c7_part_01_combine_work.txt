@@ -1,0 +1,19 @@
+Now let us combine the two conclusions we obtained for work.
+
+On one side, we have the work done by gravity.
+
+Work done by gravity is the integral of the gravitational force vector dotted with the tiny displacement vector.
+
+The gravitational force vector is minus G M m divided by r squared, multiplied by r-hat.
+
+The minus sign means gravity points toward smaller r.
+
+So the gravitational work expression is the integral of minus G M m divided by r squared, times r-hat, dotted with d r vector.
+
+On the other side, we have the work and kinetic energy result.
+
+Work is equal to mass times the integral of velocity vector dotted with the tiny change in velocity vector.
+
+So we set these two work expressions equal.
+
+The gravitational work expression equals m times the integral of v vector dotted with d v vector.

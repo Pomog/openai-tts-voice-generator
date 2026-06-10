@@ -1,0 +1,41 @@
+Now let us compare this speed with something familiar.
+
+A passenger airplane usually flies at about nine hundred kilometers per hour.
+
+That is about zero point two five kilometers per second.
+
+But our calculated speed is about eleven point one eight kilometers per second.
+
+So the falling asteroid would be more than forty times faster than a passenger airplane.
+
+This is far above Mach five, the usual boundary for hypersonic speed.
+
+Mach five is roughly one point seven kilometers per second, depending on altitude and air temperature.
+
+At hypersonic speed, the air in front of the object cannot move away fast enough.
+
+The gas is compressed extremely quickly.
+
+This rapid compression is close to adiabatic compression, meaning the gas heats up before it can transfer heat away.
+
+At eleven kilometers per second, this heating becomes extreme.
+
+A strong shock wave forms in front of the object.
+
+The surrounding air can become glowing plasma.
+
+The object’s surface can heat up, melt, vaporize, and ablate.
+
+Ablation means that material is removed from the surface by extreme heating and high-speed flow.
+
+So yes.
+
+This speed is absolutely enough to create visible atmospheric entry heating.
+
+In everyday language, we often say the object is burning in the atmosphere.
+
+More precisely, it is not ordinary fire.
+
+It is extreme aerodynamic heating, shock-wave heating, plasma formation, and surface ablation.
+
+That is why meteors glow when they enter the atmosphere.

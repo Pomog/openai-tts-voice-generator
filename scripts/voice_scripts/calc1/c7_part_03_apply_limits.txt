@@ -1,0 +1,25 @@
+Now we apply limits.
+
+The distance changes from r zero, the starting distance, to r f, the final distance.
+
+The speed changes from v zero, the starting speed, to v f, the final speed.
+
+So we write:
+
+minus G M m times the integral from r zero to r f of d r over r squared equals m times the integral from v zero to v f of v d v.
+
+Now we integrate both sides.
+
+The integral of one over r squared gives minus one over r.
+
+The integral of v d v gives one half v squared.
+
+After applying the limits, we get:
+
+G M m times open bracket, one over r f minus one over r zero, close bracket,
+
+equals
+
+m times open bracket, one half v f squared minus one half v zero squared, close bracket.
+
+This equation connects gravitational work with the change in kinetic energy.

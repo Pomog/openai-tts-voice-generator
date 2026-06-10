@@ -1,0 +1,25 @@
+Now we simplify the equation for radial motion.
+
+Radial motion means the asteroid moves directly toward the planet or directly away from the planet.
+
+In that case, the tiny displacement vector points in the r direction.
+
+So d r vector becomes d r multiplied by r-hat.
+
+Now look at the dot product.
+
+The gravitational force contains r-hat.
+
+The radial displacement also contains r-hat.
+
+And r-hat dotted with r-hat equals one.
+
+So the vector expression becomes a scalar expression.
+
+The left side becomes minus G M m times the integral of d r divided by r squared.
+
+On the right side, if the motion is along one line, v vector dotted with d v vector becomes v d v.
+
+So the equation becomes:
+
+minus G M m times the integral of d r over r squared equals m times the integral of v d v.
