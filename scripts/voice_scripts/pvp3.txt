@@ -1,0 +1,9 @@
+This Rupture is built for close-range brawling.
+
+Four autocannons provide the damage, with different ammo types for different targets.
+The scram keeps enemies from escaping, and the small neut pressures their capacitor.
+
+The core of the fit is triple armor repair: two medium armor repairers and one ancillary rep.
+Two cap boosters keep everything alive under pressure.
+
+This Rupture is not fast, but it is stubborn.
