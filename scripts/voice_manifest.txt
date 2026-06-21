@@ -1,2 +1,2 @@
 # Incursion beginner video voice-over parts
-voice_scripts/eee7.txt
+voice_scripts/pvp1.txt
