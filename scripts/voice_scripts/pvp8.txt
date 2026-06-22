@@ -1,0 +1,25 @@
+Okay, according to D-scan, there are no targets inside this complex.
+
+But I have never really used D-scan for PvP before.
+So I do not fully trust my own scan yet.
+
+I decide to check the complex manually.
+
+And yes, D-scan was correct.
+There are no targets here.
+
+That means my PvP overview and D-scan setup are probably working properly.
+
+But again, I notice the same strange issue.
+
+There is a Large Guristas Outpost visible in the Probe Scanner window, but it is not shown on my overview.
+
+Only after I select the site in the Probe Scanner, the complex appears in the overview.
+
+Maybe this is an overview setting.
+Maybe this is just how these sites refresh.
+I am not completely sure.
+
+But now the Large Outpost is visible.
+
+So let’s warp there and see if we can finally find something worth fighting.
