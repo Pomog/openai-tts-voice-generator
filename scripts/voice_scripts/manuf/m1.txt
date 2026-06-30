@@ -1,0 +1,15 @@
+This is where the manufacturing chain begins.
+
+I am on an NPC production station, and I have prepared two blueprints plus all the required components.
+
+First, let’s start with the CONCORD Capital Shield Booster.
+
+To build it, I need several expensive advanced components: Broadcast Nodes, Sterile Conduits, Wetware Mainframes, and a Capital Shield Booster II.
+
+The job cost on this station is 48.9 million ISK.
+
+The required components are estimated at 1.094 billion ISK.
+
+The final product is estimated at 1.896 billion ISK.
+
+The job will take one day and ten hours.

@@ -1,2 +1,2 @@
 # Incursion beginner video voice-over parts
-voice_scripts/pvp24.txt
+voice_scripts/manuf/m1.txt
