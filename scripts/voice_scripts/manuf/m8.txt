@@ -1,0 +1,21 @@
+Now let’s create a market sell order for the Large Projectile Turret implant, LP-1006.
+
+Here, the liquidity is even lower than with the capital modules.
+
+The expected ISK per loyalty point is also weaker — around 1.6 times lower than the manufacturing route.
+
+The spread is huge, but because the trading activity is low, this is not really a good item for speculation.
+
+A big spread means nothing if buyers are slow.
+
+At first, I considered listing it for 630.1 million ISK per unit.
+
+But to stay on top of the stack, I choose 620 million ISK per unit.
+
+For two implants, that gives a gross sell order of 1.24 billion ISK.
+
+After broker fees and sales tax, the expected result is around 1.177 billion ISK.
+
+So this part is a more direct CONCORD LP conversion.
+
+Less industry work, faster listing, but also worse ISK per LP compared to the capital module manufacturing chain.

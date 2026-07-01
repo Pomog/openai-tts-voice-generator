@@ -1,0 +1,25 @@
+So, after three days, almost everything is sold.
+
+Only one RL-1006 implant is still on the market.
+
+As you can see, I had to adjust the price once per day to stay on top of the stack.
+
+This is the part that spreadsheets do not show very well.
+
+The estimated profit can look good, but the real result depends on liquidity, competition, and how often you are ready to update your orders.
+
+Now let’s look at the actual market transactions.
+
+The sales started on June twenty-sixth, and the cumulative sales graph climbed step by step.
+
+At first, the growth was slow: 400 million, then 1 billion, then 1.64 billion ISK.
+
+But after the capital modules started selling, the graph moved much faster.
+
+In 3 days, cumulative sales reached 7.148 billion ISK.
+
+In the wallet transaction history, we can see the real sales: several smaller transactions, then two large ones at the end — 2.191 billion ISK and 1.461 billion ISK.
+
+So the result is not just theory anymore.
+
+The CONCORD LP was converted into manufactured modules, implants, and finally real ISK in the wallet.
