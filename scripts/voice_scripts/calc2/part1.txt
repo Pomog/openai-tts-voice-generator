@@ -1,0 +1,63 @@
+Opening
+
+We usually think of a dataset as a table, a column, or simply a list of numbers.
+
+But there is another way to see it.
+
+To begin, let us consider one numerical variable: one column containing several observations.
+
+We can treat this entire column as a single vector, with each observation becoming one coordinate.
+
+A dataset with three observations becomes a vector in three-dimensional space.
+
+More generally, a dataset with (n) observations becomes a vector in (n)-dimensional space.
+
+This geometric point of view allows us to reinterpret familiar statistical concepts using vectors.
+
+The mean becomes a projection.
+
+The deviations form a separate vector.
+
+Variance comes from the squared length of that deviation vector.
+
+And correlation becomes the cosine of the angle between two deviation vectors.
+
+We will build these ideas step by step.
+
+Let us begin with the mean.
+
+The Dataset Vector
+
+Here is our example dataset:
+
+[
+2,\ 4,\ 6
+]
+
+Written as a vector, it becomes:
+
+\begin{bmatrix}
+2\
+4\
+6
+\end{bmatrix}
+]
+
+Each observation becomes one coordinate of the vector.
+
+Now we want to separate this vector into two parts.
+
+One part will represent the common level of the data.
+
+The other part will represent how each observation differs from that common level.
+
+We will call them the mean component and the deviation component.
+
+So we want to write:
+
+\mathbf{V}{\text{mean}}
++
+\mathbf{V}{\text{dev}}
+]
+
+First, let us understand where the mean component comes from.

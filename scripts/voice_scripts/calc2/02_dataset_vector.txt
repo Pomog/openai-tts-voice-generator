@@ -1,0 +1,15 @@
+Here is our example dataset: two, four, and six.
+
+Written as a vector, these three observations become its three coordinates.
+
+Now we want to separate this vector into two parts.
+
+The first part will represent the common level of the data.
+
+The second part will represent how each observation differs from that common level.
+
+We will call them the mean component and the deviation component.
+
+In other words, the original dataset vector equals the mean component plus the deviation component.
+
+First, let us understand where the mean component comes from.

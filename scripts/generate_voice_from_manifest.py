@@ -31,6 +31,19 @@ Do not speak too fast.
 Pause slightly between important ideas.
 """
 
+INSTRUCTIONS2 = """
+Speak like a calm and clear educational tutorial narrator.
+
+Use a confident but beginner-friendly tone.
+Speak at a moderate pace.
+Pause briefly between important ideas.
+Emphasize key terms such as vector, coordinate, mean component,
+deviation component, variance, standard deviation, and correlation.
+
+Pronounce mathematical language naturally.
+Do not sound dramatic or promotional.
+"""
+
 MANIFEST_FILE = BASE_DIR / "voice_manifest.txt"
 OUTPUT_DIR = BASE_DIR / "voice_output"
 
@@ -96,7 +109,7 @@ def generate_voice(input_path: Path) -> Path:
         model=MODEL,
         voice=VOICE,
         input=text,
-        instructions=INSTRUCTIONS.strip(),
+        instructions=INSTRUCTIONS2.strip(),
         response_format="mp3",
     ) as response:
         response.stream_to_file(output_path)

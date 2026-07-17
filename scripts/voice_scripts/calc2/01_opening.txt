@@ -1,0 +1,25 @@
+We usually think of a dataset as a table, a column, or simply a list of numbers.
+
+But there is another way to see it.
+
+To begin, let us consider one numerical variable: one column containing several observations.
+
+We can treat this entire column as a single vector, where each observation becomes one coordinate.
+
+A dataset with three observations becomes a vector in three-dimensional space.
+
+More generally, a dataset with n observations becomes a vector in n-dimensional space.
+
+This geometric point of view allows us to reinterpret familiar statistical concepts using vector geometry.
+
+The mean becomes a projection.
+
+The deviations form a separate vector.
+
+Variance and standard deviation come from the length of that deviation vector.
+
+And correlation becomes the cosine of the angle between two deviation vectors.
+
+We will build these ideas step by step.
+
+Let us begin with the mean.
