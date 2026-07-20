@@ -1,2 +1,3 @@
 # Incursion beginner video voice-over parts
-voice_scripts/manuf/m12.txt
+voice_scripts/calc2/01_opening.txt
+voice_scripts/calc2/02_dataset_vector.txt
