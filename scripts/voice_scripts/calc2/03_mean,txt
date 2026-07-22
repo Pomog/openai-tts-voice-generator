@@ -18,7 +18,7 @@ Solving the resulting equation gives the sum of all observations divided by dime
 
 This value is exactly the arithmetic mean of the dataset.
 
-The second derivative is positive, confirming that this critical point is the unique minimum.
+The second derivative is positive, so the graph of the squared-distance function is concave up, and the critical point is its unique global minimum.
 
 This result also agrees with the standard vector-projection formula.
 

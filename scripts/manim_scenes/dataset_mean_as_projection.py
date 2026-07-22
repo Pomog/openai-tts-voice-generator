@@ -191,14 +191,16 @@ class DatasetMeanAsProjection(Scene):
 
         decomposition = MathTex(
             r"\mathbf{x}",
-            "=",
+            r"=",
             r"\underbrace{\operatorname{proj}_{\mathcal C}(\mathbf{x})}_{\text{constant component}}",
-            "+",
+            r"+\;",
             r"\underbrace{\left(\mathbf{x}-\operatorname{proj}_{\mathcal C}(\mathbf{x})\right)}_{\text{remainder}}",
         ).scale(0.88)
+
         decomposition[0].set_color(BLUE_B)
         decomposition[2].set_color(GREEN)
         decomposition[4].set_color(YELLOW)
+
         decomposition.move_to(UP * 0.55)
 
         component_note = bottom_note(
@@ -211,11 +213,21 @@ class DatasetMeanAsProjection(Scene):
         # VOICEOVER:
         # "Let us separate the dataset vector into two components..."
         self.play(Write(decomposition))
+
         pulse(decomposition[0], color=BLUE_B)
         pulse(decomposition[2], color=GREEN)
         pulse(decomposition[4], color=YELLOW)
-        self.play(FadeIn(component_note, shift=UP * 0.15))
+
+        self.play(
+            FadeIn(
+                component_note,
+                shift=UP * 0.15,
+            )
+        )
+
         self.wait(0.9)
+
+        
 
         # ============================================================
         # 4. Projection = closest point in the subspace
@@ -477,12 +489,6 @@ class DatasetMeanAsProjection(Scene):
         second_derivative[0].set_color(YELLOW)
         second_derivative[2].set_color(GREEN)
 
-        calculus_note = bottom_note(
-            "The derivative finds the critical point; the second derivative classifies it.",
-            color=GRAY_A,
-            size=21,
-            y=-3.28,
-        )
 
         # VOICEOVER:
         # "We differentiate this function and set the derivative equal to zero..."
@@ -508,7 +514,6 @@ class DatasetMeanAsProjection(Scene):
         # VOICEOVER:
         # "The second derivative is positive..."
         self.play(Write(second_derivative))
-        self.play(FadeIn(calculus_note, shift=UP * 0.12))
         pulse(second_derivative[0], color=YELLOW)
         pulse(second_derivative[2], color=GREEN)
         self.wait(1.1)
@@ -521,7 +526,6 @@ class DatasetMeanAsProjection(Scene):
             derivative_line,
             algebra_line,
             second_derivative,
-            calculus_note,
             mean_box,
         )
 
@@ -533,6 +537,7 @@ class DatasetMeanAsProjection(Scene):
         span_formula.move_to(UP * 1.85)
         span_formula[0].set_color(GREEN)
         span_formula[2].set_color(BLUE_B)
+        span_formula[2].shift(RIGHT * 1.5)
 
         projection_formula = MathTex(
             r"\operatorname{proj}_{\mathcal C}(\mathbf{x})",
@@ -541,18 +546,19 @@ class DatasetMeanAsProjection(Scene):
             r"{\mathbf 1_n\cdot\mathbf 1_n}\mathbf 1_n",
         ).scale(1.02)
         projection_formula.move_to(UP * 0.55)
+        projection_formula.move_to(LEFT * 0.55)
         projection_formula[0].set_color(GREEN)
 
         numerator = MathTex(
             r"\mathbf{x}\cdot\mathbf 1_n=\sum_{i=1}^{n}x_i",
         ).scale(0.9)
-        numerator.move_to(LEFT * 3.25 + DOWN * 0.75)
+        numerator.move_to(LEFT * 3.25 + DOWN * 1.00)
         numerator.set_color(BLUE_B)
 
         denominator = MathTex(
             r"\mathbf 1_n\cdot\mathbf 1_n=n",
         ).scale(0.9)
-        denominator.move_to(RIGHT * 3.25 + DOWN * 0.75)
+        denominator.move_to(RIGHT * 3.25 + DOWN * 1.00)
         denominator.set_color(YELLOW)
 
         simplified_projection = MathTex(
@@ -562,7 +568,7 @@ class DatasetMeanAsProjection(Scene):
             "=",
             r"\bar{x}\mathbf 1_n",
         ).scale(1.0)
-        simplified_projection.move_to(DOWN * 1.9)
+        simplified_projection.move_to(DOWN * 2.15)
         simplified_projection[0].set_color(GREEN)
         simplified_projection[-1].set_color(GREEN)
 
@@ -650,5 +656,5 @@ class DatasetMeanAsProjection(Scene):
         self.play(Write(example_projection))
         pulse(example_mean[2], color=GREEN)
         pulse(example_projection[-1], color=GREEN)
-        self.play(Create(final_box), FadeIn(final_statement, shift=UP * 0.12))
+        self.play(Create(final_box), FadeIn(final_statement, shift=UP * 0.10))
         self.wait(2.0)
