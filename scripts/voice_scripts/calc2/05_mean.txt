@@ -1,0 +1,29 @@
+Now let us subtract the projection vector from the original dataset vector.
+
+The resulting remainder is called the deviation vector.
+
+This is the second component of the original dataset vector.
+
+Each of its coordinates tells us how far the corresponding observation lies above or below the mean.
+
+The Euclidean length of the deviation component measures the overall magnitude of variation in the dataset.
+
+If we take the dot product of the deviation vector with itself, we obtain its squared length.
+
+This is the sum of all squared deviations from the mean - total variance.
+
+But variance is not this total.
+
+Variance is the mean of the squared deviations.
+
+To obtain this mean geometrically, we apply the same projection principle once again.
+
+We consider the squared deviations as the coordinates of a new vector and project this vector onto the constant subspace.
+
+Its dot product with the all-ones vector adds all the squared deviations together.
+
+Dividing by the squared length of the all-ones vector converts this total into their mean, because that squared length equals the number of observations.
+
+Finally, multiplying by the all-ones vector produces a constant vector whose common coordinate is the variance.
+
+The square root of that coordinate is the standard deviation.
