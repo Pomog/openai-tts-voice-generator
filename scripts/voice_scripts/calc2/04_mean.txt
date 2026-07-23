@@ -1,0 +1,23 @@
+For a general dataset vector, the squared distance to the constant vector is the sum of the squared differences between each observation and the constant.
+
+This squared distance is now a function of the single unknown value, and we want to find the value that makes it as small as possible.
+
+We differentiate this function and set the derivative equal to zero to find its critical point.
+
+Solving the resulting equation gives the sum of all observations divided by dimensionallity.
+
+This value is exactly the arithmetic mean of the dataset.
+
+The second derivative is positive, so the graph of the squared-distance function is concave up, and the critical point is its unique global minimum.
+
+This result also agrees with the standard vector-projection formula.
+
+The constant subspace is spanned by the all-ones vector.
+
+To project the dataset vector onto this subspace, we take its dot product with the all-ones vector, divide by the squared length of the all-ones vector, and then multiply by the all-ones vector.
+
+The numerator is the sum of all observations, while the denominator is the number of observations, n.
+
+Therefore, the projection is the mean multiplied by the all-ones vector.
+
+The mean of a dataset is the single scalar that, when repeated across all coordinates, forms the projection of the dataset vector onto the constant subspace.
