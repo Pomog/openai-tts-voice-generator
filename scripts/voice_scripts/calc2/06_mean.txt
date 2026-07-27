@@ -1,0 +1,129 @@
+For one dataset, we separated the data vector into two orthogonal components: the constant vector containing the mean, and the deviation vector containing everything that varies around the mean.
+
+Now suppose that, for every observation, we measure two variables.
+
+We collect the first measurements in a vector called X, and the second measurements in a vector called Y.
+
+Coordinates with the same index belong to the same observation. Therefore, we can ask:
+
+Do these two variables deviate from their means together?
+
+When X is above its mean, is Y usually also above its mean?
+
+When X is below its mean, is Y also below its mean?
+
+Or do they tend to deviate in opposite directions?
+
+To answer this geometrically, we remove the constant component from each data vector.
+
+From X, we subtract its mean vector.
+
+From Y, we subtract its mean vector.
+
+This produces two deviation vectors.
+
+Each coordinate in the first vector is an X deviation, and the corresponding coordinate in the second vector is the associated Y deviation.
+
+Now we multiply corresponding deviations.
+
+This produces a new vector of products.
+
+If both deviations have the same sign, their product is positive.
+
+This happens when both observations are above their respective means, or both are below their respective means.
+
+If the deviations have opposite signs, their product is negative.
+
+This happens when one observation is above its mean and the other is below its mean.
+
+The dot product of the two deviation vectors adds all these products together.
+
+It therefore measures the total alignment between the two deviation patterns.
+
+A positive result means that same-direction deviations dominate.
+
+A negative result means that opposite-direction deviations dominate.
+
+A result near zero means that the positive and negative products approximately cancel.
+
+But covariance is not this total.
+
+Population covariance is the mean of the products of corresponding deviations.
+
+To obtain this mean geometrically, we apply the projection principle again.
+
+We treat the products of corresponding deviations as the coordinates of a new vector and project this vector onto the constant subspace.
+
+In the projection calculation, the dot product with the all-ones vector adds all the products together.
+
+Dividing by the squared length of the all-ones vector converts this total into their mean, because that squared length equals the number of observations.
+
+The resulting projection is a constant vector whose common coordinate is the population covariance.
+
+Therefore, covariance is the dot product of the two deviation vectors divided by the number of observations.
+
+However, the magnitude of covariance depends on the units and scales of both variables.
+
+For example, changing a measurement from metres to centimetres makes its deviations one hundred times larger. This also makes the covariance one hundred times larger, even though the relationship between the observations has not changed.
+
+To remove this dependence on units, we move into z-score space.
+
+We divide every X deviation by the standard deviation of X, and every Y deviation by the standard deviation of Y.
+
+The resulting coordinates are z-scores.
+
+They no longer describe deviations in metres, kilograms, or any other original units.
+
+Instead, each coordinate describes a deviation in units of that variable’s standard deviation.
+
+This standardization changes the lengths of the deviation vectors, but it does not change their directions. Therefore, it does not change the angle between them.
+
+We now take the mean of the products of corresponding z-scores.
+
+This mean is the Pearson correlation coefficient.
+
+Geometrically, the same value is the normalized dot product of the two deviation vectors.
+
+A normalized dot product is the cosine of the angle between the vectors.
+
+Therefore, Pearson correlation is the cosine of the angle between the two deviation vectors.
+
+If the vectors point in exactly the same direction, their correlation is positive one.
+
+This means that their deviations follow exactly the same pattern, although their original scales may be different.
+
+If the vectors point in exactly opposite directions, their correlation is negative one.
+
+This means that one deviation pattern is the exact reverse of the other.
+
+If the vectors are perpendicular, their correlation is zero.
+
+This means that their deviation patterns have no linear directional alignment.
+
+However, zero correlation does not necessarily mean that there is no relationship between the variables.
+
+It means only that Pearson correlation detects no linear relationship.
+
+We can now connect the entire geometric picture.
+
+The mean is obtained by projecting a data vector onto the constant subspace.
+
+Subtracting that projection produces the deviation vector.
+
+Variance is the average squared size of the coordinates of one deviation vector.
+
+Equivalently, it is the squared length of the deviation vector divided by the number of observations.
+
+Covariance is the average product of the corresponding coordinates of two deviation vectors.
+
+Equivalently, it is their dot product divided by the number of observations.
+
+Covariance contains both the scales of variation and the directional alignment of the two vectors.
+
+Pearson correlation removes those scales.
+
+What remains is only their directional alignment: the cosine of the angle between the two deviation vectors.
+
+So variance, covariance, and correlation are not disconnected statistical ideas.
+
+They are different geometric measurements constructed from deviation vectors.
