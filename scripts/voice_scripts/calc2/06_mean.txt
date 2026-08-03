@@ -1,3 +1,5 @@
+Now the most interesting part.
+
 For one dataset, we separated the data vector into two orthogonal components: the constant vector containing the mean, and the deviation vector containing everything that varies around the mean.
 
 Now suppose that, for every observation, we measure two variables.
