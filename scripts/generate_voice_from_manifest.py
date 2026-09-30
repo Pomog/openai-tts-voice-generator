@@ -4,6 +4,7 @@ import os
 from dotenv import load_dotenv
 from openai import OpenAI
 
+# python scripts/generate_voice_from_manifest.py
 
 # Folder where this Python script is located: scripts/
 BASE_DIR = Path(__file__).resolve().parent

@@ -746,7 +746,11 @@ class CovarianceAndCorrelation(Scene):
             r"\mathbf{Z}_X=\frac{1}{\sigma_X}\mathbf{X}_c",
             color=correlation_color,
         ).scale(0.82)
-        scaled_label.next_to(scaled_arrow.get_end(), DOWN, buff=0.18)
+        scaled_label.next_to(
+            scaled_arrow.get_end(),
+            RIGHT,
+            buff=0.45,
+        )
 
         direction_formula = MathTex(
             r"\frac{1}{\sigma_X}>0",
@@ -791,7 +795,7 @@ class CovarianceAndCorrelation(Scene):
             r"=",
             r"\frac{1}{n}\sum_{i=1}^{n}z_{X,i}z_{Y,i}",
         ).scale(1.05)
-        z_mean_formula.move_to(UP * 1.0)
+        z_mean_formula.move_to(UP * 1.15)
         z_mean_formula[0].set_color(correlation_color)
         z_mean_formula[2].set_color(correlation_color)
 
@@ -802,7 +806,11 @@ class CovarianceAndCorrelation(Scene):
             r"=",
             r"\frac{\mathbf{X}_c\cdot\mathbf{Y}_c}{\|\mathbf{X}_c\|\,\|\mathbf{Y}_c\|}",
         ).scale(0.9)
-        cancel_formula.move_to(DOWN * 0.22)
+        cancel_formula.next_to(
+            z_mean_formula,
+            DOWN,
+            buff=0.35,
+        )
         cancel_formula[0].set_color(correlation_color)
         cancel_formula[2].set_color(covariance_color)
         cancel_formula[4].set_color(correlation_color)
@@ -816,7 +824,11 @@ class CovarianceAndCorrelation(Scene):
             r"=",
             r"0.6",
         ).scale(0.98)
-        example_correlation.move_to(DOWN * 1.35)
+        example_correlation.next_to(
+            cancel_formula,
+            DOWN,
+            buff=0.35,
+        )
         example_correlation[0].set_color(correlation_color)
         example_correlation[2].set_color(product_color)
         example_correlation[4].set_color(correlation_color)
@@ -877,7 +889,11 @@ class CovarianceAndCorrelation(Scene):
         x_arrow_label = MathTex(r"\mathbf{X}_c", color=x_color).scale(0.9)
         x_arrow_label.next_to(x_arrow.get_end(), DOWN, buff=0.12)
         y_arrow_label = MathTex(r"\mathbf{Y}_c", color=y_color).scale(0.9)
-        y_arrow_label.next_to(y_arrow.get_end(), RIGHT, buff=0.12)
+        y_arrow_label.next_to(
+            y_arrow.point_from_proportion(0.78),
+            RIGHT,
+            buff=0.15,
+        )
 
         cosine_formula = MathTex(
             r"r",
