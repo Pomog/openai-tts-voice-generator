@@ -1,14 +1,2 @@
 # Incursion beginner video voice-over parts
-voice_scripts/discovery/1.txt
-voice_scripts/discovery/2.txt
-voice_scripts/discovery/3.txt
-voice_scripts/discovery/4.txt
-voice_scripts/discovery/5.txt
-voice_scripts/discovery/6.txt
-voice_scripts/discovery/7.txt
-voice_scripts/discovery/8.txt
-voice_scripts/discovery/9.txt
-voice_scripts/discovery/10.txt
-voice_scripts/discovery/11.txt
-voice_scripts/discovery/12.txt
-voice_scripts/discovery/13.txt
+voice_scripts/discovery/14.txt

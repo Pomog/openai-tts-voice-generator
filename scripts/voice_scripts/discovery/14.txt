@@ -1,0 +1,7 @@
+I think I’ve been doing Project Discovery completely wrong.
+I was carefully tracing every cluster, trying to get the best accuracy possible.
+But on the empty samples — the ones without density lines along the axes — there’s a much faster way.
+David Garth and DenVer gave me this trick: click three times, then click outside the box. It closes the polygon automatically, and you can submit almost instantly.
+No careful tracing. Just four clicks, submit, and move on.
+You can repeat it ridiculously fast - apparently, a little too fast.
+Four clicks. Submit. Next sample. That’s it.
