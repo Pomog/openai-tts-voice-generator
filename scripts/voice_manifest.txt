@@ -1,2 +1,2 @@
 # Incursion beginner video voice-over parts
-voice_scripts/harvest1/1.txt
+voice_scripts/harvest2/1.txt
